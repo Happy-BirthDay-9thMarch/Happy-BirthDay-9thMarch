@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Special Message</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="typeText"></div>
+<div class="hearts"></div>
+
+<div class="layout">
+
+    <!-- BIG LEFT BOX -->
+    <div class="left-box">
+        
+        Happy birthday MOTi 🎀<br>
+        Aresha tum meri life ka ak bohut acha hissa ho wo pehli larki jiske sath ma comfortable hua apni dill ki har ak baat bata sakta hun 💗💓<br>
+        tujhe mujhe khushi ha ka tum meri life me aye Allah tumhein hamesha khush rakhe ameen🌺🌸<br><br>
+        tumhe tumhari life ki har ak khushi mile ma tumhein kabhi nahin bhula paon ga ma janta hun hamare bich kafi larain hoi hain jo hamari dosti ko toor nahin sakta chahe jasi bhi larai ho tum bohut achi ho hamesha khush raho or mujhe mat bhulna<br><br>
+        MOTi pgl ARESHA 🦋🎀💓❤️
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-side">
+
+        <div class="right-box">
+
+        AND HAPPY BIRTHDAY TO YOU ✨🥳🤩☺️AJ KHUSHI KA DIN HA TERA SAMJHIN NAWW  🫠AHM🤭💖💝 CHAL AB TU CELEBRATE KAR TERA JASA DOST MUJHE KABHI NAHI MILA TUNE MUJHE BOHUT KUCH SIKHAYA HA 🎀❤️💓✨🦋🥀🌹💐AND AGAIN HAPPY BIRTHDAY MOTIIIII🥳🥳🤭
+        </div>
+
+        <div class="right-box">
+
+        Aresha one day i may die without saying  goodbye to you<br>
+
+        But I will never forget to say thank you because you have given me one of the loveliest friendship
+          
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function createHeart(){
+
+    const heart = document.createElement("span");
+    heart.innerHTML = ["💗","💖","💞","🎂","🍰","🎈"][Math.floor(Math.random()*6)];
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (16 + Math.random()*20) + "px";
+    heart.style.animationDuration = (5 + Math.random()*5) + "s";
+
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
+}
+
+setInterval(createHeart,2000);
+
+/* CURSOR TRAIL */
+
+document.addEventListener("mousemove", function(e){
+
+const trail = document.createElement("div");
+trail.className = "cursor-trail";
+
+trail.style.left = e.clientX + "px";
+trail.style.top = e.clientY + "px";
+
+document.body.appendChild(trail);
+
+setTimeout(()=>{
+trail.remove();
+},600);
+
+});
+
+</script>
+<a href="message2.html" class="next-button">Next ➜</a>
+
+</body>
+</html>
